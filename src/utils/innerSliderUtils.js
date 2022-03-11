@@ -656,7 +656,8 @@ export const getTrackLeft = spec => {
     "slideWidth",
     "listWidth",
     "variableWidth",
-    "slideHeight"
+    "slideHeight",
+    "rtl"
   ]);
 
   const {
@@ -672,7 +673,8 @@ export const getTrackLeft = spec => {
     variableWidth,
     slideHeight,
     fade,
-    vertical
+    vertical,
+    rtl
   } = spec;
 
   var slideOffset = 0;
@@ -715,7 +717,11 @@ export const getTrackLeft = spec => {
   verticalOffset = slidesToOffset * slideHeight;
 
   if (!vertical) {
-    targetLeft = slideIndex * slideWidth * -1 + slideOffset;
+    if (!rtl) targetLeft = slideIndex * slideWidth * -1 + slideOffset;
+    else
+      targetLeft =
+        (slideCount - slideIndex - slidesToShow) * slideWidth * -1 +
+        slideOffset;
   } else {
     targetLeft = slideIndex * slideHeight * -1 + verticalOffset;
   }
