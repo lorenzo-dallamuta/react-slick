@@ -13,11 +13,6 @@ const getSlideClasses = spec => {
   let slickActive, slickCenter, slickCloned;
   let centerOffset, index;
 
-  if (spec.rtl) {
-    index = spec.slideCount - 1 - spec.index;
-  } else {
-    index = spec.index;
-  }
   slickCloned = index < 0 || index >= spec.slideCount;
   if (spec.centerMode) {
     centerOffset = Math.floor(spec.slidesToShow / 2);
