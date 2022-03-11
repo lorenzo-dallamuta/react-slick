@@ -109,7 +109,6 @@
       "git add"
     ]
   },
-  "npmName": "react-slick-rtl2",
   "npmFileMap": [
     {
       "basePath": "/dist/",
@@ -119,6 +118,6 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/lorenzo-dallamuta/react-slick/issues"
+    "url": "https://github.com/lorenzo-dallamuta/react-slick-rtl2-obsolete/issues"
   }
 }
